@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Superhero",
+      "description": "Superhero comics are a type of American comic book that feature costumed crimefighters known as superheroes. These characters possess superhuman abilities and are dedicated to protecting the public."
+    },
+    {
+      "id": 2,
+      "name": "Sci-Fi",
+      "description": "Science fiction comics are a type of American comic book that feature science fiction stories. These stories are set in the future, in outer space, or in alternate dimensions."
+    },
+    {
+      "id": 3,
+      "name": "Fantasy",
+      "description": "Fantasy comics are a type of American comic book that feature fantasy stories. These stories are set in magical worlds, with mythical creatures and supernatural elements."
+    },
+    {
+      "id": 4,
+      "name": "Horror",
+      "description": "Horror comics are a type of American comic book that feature horror stories. These stories are filled with suspense, terror, and supernatural elements."
+    },
+    {
+      "id": 5,
+      "name": "Mystery",
+      "description": "Mystery comics are a type of American comic book that feature mystery stories. These stories are filled with suspense, intrigue, and unexpected twists."
+    }
+  ],
+  "comics": [
+    {
+      "id": 1,
+      "title": "The Amazing",
+      "issue": 1,
+      "year": 1963,
+      "publisher": "Marvel",
+      "writer": "Stan Lee",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "The Incredible",
+      "issue": 1,
+      "year": 1962,
+      "publisher": "Marvel",
+      "writer": "Stan Lee",
+      "categoryId": 1
+    }
+  ]
+}
