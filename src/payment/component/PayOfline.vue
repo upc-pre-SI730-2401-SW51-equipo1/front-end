@@ -1,4 +1,5 @@
 <template>
+
   <section :class="$style.returnsPolicy">
     <div :class="$style.wrapperNewsletterBlockParent">
       <div :class="$style.wrapperNewsletterBlock">
@@ -11,7 +12,7 @@
       <div :class="$style.topMenuBarParent">
         <div :class="$style.topMenuBar" />
         <div :class="$style.logoArea">
-          <img :class="$style.image4Icon" alt="" :src="'@/public/assets/image-4@2x.png'" />
+          <img :class="$style.image4Icon" alt="" :src="'/src/public/assets/image-4@2x.png'" />
         </div>
         <h1 :class="$style.ckeckout">ckeckout</h1>
         <div :class="$style.mainBanner">
@@ -22,7 +23,7 @@
                   :class="$style.dashiconsarrowDownAlt2"
                   loading="lazy"
                   alt=""
-                  :src="'/assets/dashiconsarrowdownalt2@2x.png'"
+                    :src="'/src/public/assets/dashiconsarrowdownalt2@2x.png'"
               />
             </div>
             <div :class="$style.checkout">checkout</div>
