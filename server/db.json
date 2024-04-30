@@ -34,7 +34,8 @@
       "year": 1963,
       "publisher": "Marvel",
       "writer": "Stan Lee",
-      "categoryId": 1
+      "categoryId": 1,
+      "cost": 10.0
     },
     {
       "id": 2,
@@ -43,7 +44,16 @@
       "year": 1962,
       "publisher": "Marvel",
       "writer": "Stan Lee",
-      "categoryId": 1
+      "categoryId": 1,
+      "cost": 10.0
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "User1",
+      "phone": "1234567890",
+      "cost": 100.0
+    }
+    ]
 }
