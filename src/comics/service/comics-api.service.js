@@ -1,4 +1,7 @@
 import http from '../../shared/services/http-common';
+import axios from 'axios';
+
+const baseUrl = 'http://localhost:3000/comics';
 
 export class TutorialsApiService {
     getComics() {
@@ -17,7 +20,15 @@ export class TutorialsApiService {
     delete(id) {
         return http.delete(`/comics/${id}`);
     }
-    findByTitle(title) {
-        return http.get(`/comics?title=${title}`);
-    }
 }
+
+export function fetchComics() {
+    return axios.get(baseUrl)
+        .then(response => response.data);
+}
+
+export function filterComicsByCategory(categoryId) {
+    return axios.get(`${baseUrl}/category/${categoryId}/comics`)
+        .then(response => response.data);
+}
+

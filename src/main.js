@@ -13,7 +13,9 @@ import Menubar from "primevue/menubar";
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Toolbar from "primevue/toolbar";
-
+import Card from "primevue/card";
+import CascadeSelect from "primevue/cascadeselect";
+import Button from "primevue/button";
 // Crear la aplicación Vue y configurar PrimeVue
 const app = createApp(App);
 app.use(PrimeVue, { ripple: true });
@@ -21,8 +23,10 @@ app.use(PrimeVue, { ripple: true });
 // Registrar componentes globalmente
 app.component('pv-menubar', Menubar);
 app.component('pv-data-table', DataTable);
+app.component('pv-card', Card);
 app.component('pv-column', Column);
 app.component('pv-toolbar', Toolbar);
-
+app.component('pv-cascade-select', CascadeSelect);
+app.component('pv-button', Button);
 // Montar la aplicación
 app.mount('#app');
