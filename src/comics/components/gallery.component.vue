@@ -105,30 +105,9 @@ li{
 
 /* Responsive styles for hamburger menu */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .search-bar {
     flex-basis: 100%;
     justify-content: center;
-  }
-
-  .hamburger-menu {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-
-  .hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
   }
 }
 
