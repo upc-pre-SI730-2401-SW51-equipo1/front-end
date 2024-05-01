@@ -1,4 +1,78 @@
 {
+  "libros": [
+    {
+      "id": 1,
+      "title": "The Amazing",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 2,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 3,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 4,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 5,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 6,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 7,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    },
+    {
+      "id": 8,
+      "title": "The Incredible",
+      "price": 25,
+      "writer": "Stan Lee",
+      "image": "./src/assets/images/libro.png",
+      "recommendation": true,
+      "gender": "Action"
+    }
+  ],
   "categories": [
     {
       "id": 1,
