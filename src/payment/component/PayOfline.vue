@@ -96,7 +96,7 @@
         <div :class="$style.errorMessage">
           <div :class="$style.listItem">
             <div :class="$style.listIcon">
-              <div :class="$style.volverAMtodos">Volver a métodos de pago</div>
+              <div :class="$style.volverAMtodos" @click="$router.push('/ofline')">Ir al pago Ofline</div>
             </div>
             <div :class="$style.imageCaption">
               <img :class="$style.cardLayoutIcon" alt="" :src="'src/public/assets/frame-3.svg'" />
@@ -137,7 +137,7 @@
               <img :class="$style.formFieldIcon" alt="" :src="'src/public/assets/frame-1.svg'" />
                 <input type="text" id="user" v-model="newUser.user"
                     :class="$style.imageColumn"
-                    placeholder="Juan Pérez"
+                               placeholder="Juan Pérez"
 
                 />
             </div>

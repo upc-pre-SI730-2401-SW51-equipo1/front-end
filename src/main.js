@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import PrimeVue from "primevue/config";
 import router from './router';
-
+import shoppingcartContent from '../src/shopping-cart/component/shoppingcart-content.component.vue';
 // Importar estilos de PrimeVue
 import 'primevue/resources/themes/md-light-indigo/theme.css'  // Tema principal
 import 'primevue/resources/primevue.min.css'  // Estilos de componentes
@@ -34,7 +34,7 @@ app.component('pv-data-table', DataTable);
 app.component('pv-card', Card);
 app.component('pv-column', Column);
 app.component('pv-toolbar', Toolbar);
-
+app.component('pv-shoppingcart-content', shoppingcartContent)
 app.component('pv-cascade-select', CascadeSelect);
 app.component('pv-button', Button);
 

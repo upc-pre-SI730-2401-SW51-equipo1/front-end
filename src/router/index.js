@@ -7,19 +7,14 @@ import login from "../auth/pages/Login/Login.vue";
 import CreateAccount from "../auth/pages/create-account/CreateAccount.vue";
 import recomendation from "@/recommendations/pages/recomendation.vue";
 import filter from "@/comics/pages/filter.vue";
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
 
         { path: '/home', component: index },
         {path: "/online", component: CheckoutOnline,
-            beforeEnter: (to, from, next) => {
-                if (!store.getters.isAuthenticated) { // Utiliza el getter de Vuex
-                    next('/')
-                } else {
-                    next()
-                }
-            }
+
         },
         {
             path: "/ofline",
@@ -38,7 +33,9 @@ const router = createRouter({
         { path: '/', redirect: '/home' },
         { path: '/create-account', component: CreateAccount },
         { path: '/recomendation', component: recomendation },
+,
         { path: '/filter', component: filter },
+
     ],
 });
 router.beforeEach((to, from, next) => {

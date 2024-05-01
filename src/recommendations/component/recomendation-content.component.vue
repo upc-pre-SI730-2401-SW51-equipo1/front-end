@@ -35,7 +35,7 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-    <button :class="{showmore: true}">Show More</button>
+    <button :class="{showmore: true} "  @click="$router.push('/filter')">Show More</button>
   </div>
 </template>
 

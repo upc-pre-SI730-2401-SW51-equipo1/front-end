@@ -32,7 +32,7 @@
         </div>
       </div>
     </section>
-    <section :class="$style.rectangleGroup">
+    <form @submit.prevent="createUser" :class="$style.rectangleGroup">
       <div :class="$style.frameItem" />
       <div :class="$style.frameParent">
         <div :class="$style.rectangleContainer">
@@ -46,13 +46,13 @@
                     <div :class="$style.firstNameParent">
                       <div :class="$style.firstName">First Name</div>
                       <div :class="$style.rectangleWrapper">
-                        <div :class="$style.rectangleDiv" />
+                        <input  v-model="newUser.user" :class="$style.rectangleDiv" />
                       </div>
                     </div>
                     <div :class="$style.dataLink">
                       <div :class="$style.lastName">Last Name</div>
                       <div :class="$style.dataLinkInner">
-                        <div :class="$style.frameChild1" />
+                        <input  v-model="newUser.user" :class="$style.frameChild1" />
                       </div>
                     </div>
                   </div>
@@ -60,7 +60,7 @@
                     Company Name (Optional)
                   </div>
                 </div>
-                <div :class="$style.frameChild2" />
+                <input v-model="newUser.company" :class="$style.frameChild2" />
               </div>
             </div>
             <div :class="$style.frameWrapper1">
@@ -68,7 +68,7 @@
                 <div :class="$style.countryRegionParent">
                   <div :class="$style.countryRegion">Country / Region</div>
                   <div :class="$style.rectangleFrame">
-                    <input :class="$style.rectangleInput" type="text" />
+                    <input v-model="newUser.country" :class="$style.rectangleInput" type="text" />
                   </div>
                   <div :class="$style.sriLanka">Sri Lanka</div>
                   <img
@@ -83,7 +83,7 @@
               <div :class="$style.streetAddressParent">
                 <div :class="$style.streetAddress">Street address</div>
                 <div :class="$style.dataHub">
-                  <div :class="$style.inputGate" />
+                  <input v-model="newUser.street"  :class="$style.inputGate" />
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
               <div :class="$style.townCityParent">
                 <div :class="$style.townCity">Town / City</div>
                 <div :class="$style.rectangleWrapper1">
-                  <div :class="$style.frameChild3" />
+                  <input v-model="newUser.city" :class="$style.frameChild3" />
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@
             <div :class="$style.provinceParent">
               <div :class="$style.province">Province</div>
               <div :class="$style.rectangleWrapper2">
-                <input :class="$style.frameChild4" type="text" />
+                <input v-model="newUser.Province"  :class="$style.frameChild4" type="text" />
               </div>
               <div :class="$style.westernProvince">Western Province</div>
             </div>
@@ -115,6 +115,7 @@
               placeholder="ZIP code"
               rows="6"
               cols="23"
+              v-model="newUser.ZipCode"
           />
           <div :class="$style.frameParent2">
             <textarea
@@ -122,11 +123,12 @@
                 placeholder="Phone"
                 rows="6"
                 cols="23"
+                v-model="newUser.phone"
             />
             <div :class="$style.emailAddressParent">
-              <div :class="$style.emailAddress">Email address</div>
+              <div :class="$style.emailAddress" >Email address</div>
               <div :class="$style.rectangleWrapper3">
-                <div :class="$style.frameChild6" />
+                <input :class="$style.frameChild6" v-model="newUser.email"  />
               </div>
             </div>
           </div>
@@ -233,7 +235,7 @@
               </div>
             </div>
             <div :class="$style.frameWrapper7">
-              <button :class="$style.groupButton">
+              <button  @click="createUser" :class="$style.groupButton">
                 <div :class="$style.frameChild10" />
                 <div :class="$style.placeOrder">Place order</div>
               </button>
@@ -241,7 +243,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </form>
     <section :class="$style.featureWrapper">
       <div :class="$style.feature">
         <div :class="$style.trophy1Parent">
@@ -291,11 +293,33 @@
   </main>
 </template>
 <script>
-import { defineComponent } from "vue";
-
+import {defineComponent, ref} from "vue";
+import {OnlineEntity} from "@/payment/model/online.entity.js";
+import {PaymentService} from "@/payment/service/payment.service";
 export default defineComponent({
   name: "Online",
-});
+  setup() {
+    // Creas una instancia de tu servicio
+    const paymentService = new PaymentService();
+    const newUser = ref(new OnlineEntity('','','','','','', '', '', '','','','25'));
+    const createUser = () => {
+      // Llama al método create de tu servicio con el nuevo usuario
+      paymentService.create(newUser.value).then(
+          response => {
+            console.log('Pago creado con éxito:', response);
+          },
+          error => {
+            console.error('Hubo un error al crear el Pago:', error);
+          }
+      );
+    };
+    return {
+      newUser,
+      createUser
+    };
+  }
+
+  });
 </script>
 <style module>
 .wrapperRectangle1Child {

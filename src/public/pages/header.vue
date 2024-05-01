@@ -16,10 +16,10 @@
       <div :class="$style.frameParent">
         <nav :class="$style.frameWrapper">
           <nav :class="$style.homeParent">
-            <div :class="$style.home">Home</div>
-            <div :class="$style.shop">Shop</div>
-            <div :class="$style.about">About</div>
-            <div :class="$style.contact">Contact</div>
+            <div :class="$style.home" @click="$router.push('/recomendation')">Home</div>
+            <div :class="$style.shop" @click="$router.push('/filter')">Shop</div>
+            <div :class="$style.about" @click="$router.push('/home')">About</div>
+            <div :class="$style.contact" @click="$router.push('/home')">Contact</div>
           </nav>
         </nav>
         <div :class="$style.mdiaccountAlertOutlineParent">
@@ -46,6 +46,7 @@
               loading="lazy"
               alt=""
               :src="'src/public/assets/antdesignshoppingcartoutlined.svg'"
+              @click="showModal = true"
           />
           <div :class="$style.meubelHouseLogos05Parent">
             <img
@@ -59,12 +60,26 @@
       </div>
     </div>
   </header>
+  <Dialog v-model:visible="showModal">
+    <shoppingcartContent />
+  </Dialog>
 </template>
 <script>
 import { defineComponent } from "vue";
-
+import shoppingcartContent from '../../shopping-cart/component/shoppingcart-content.component.vue';
+import Dialog from 'primevue/dialog';
 export default defineComponent({
   name: "Header",
+  components: {
+     shoppingcartContent,
+    Dialog,
+
+  },
+  data() {
+    return {
+      showModal: false,  // Agrega una propiedad de datos para controlar la visibilidad del modal
+    };
+  },
 });
 </script>
 <style module>
