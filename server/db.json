@@ -115,5 +115,34 @@
       "phone": "964457986",
       "cost": ""
     }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "email": "sergiosad123@gmail.com",
+      "password": "pecan",
+      "phone": "964457986",
+      "ruc": "12345678912",
+      "IsAdmin": false,
+      "token": ""
+    },
+    {
+      "username": "sergio",
+      "password": "pecan",
+      "mobileNumber": "964457986",
+      "id": 3
+    }
+  ],
+  "admin": [
+    {
+      "id": 0,
+      "username": "admin",
+      "password": "pecan"
+    },
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    }
   ]
 }

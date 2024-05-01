@@ -1,5 +1,14 @@
 <script>
+import Cookies from "js-cookie";
+import { useStore } from 'vuex';
 
+export default {
+  created() {
+    const store = useStore();
+    const isAuthenticated = Cookies.get('isAuthenticated') === 'true';
+    store.commit('setAuthenticated', isAuthenticated);
+  },
+}
 
 </script>
 
@@ -8,7 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
   />
-<<router-view></router-view>>
+<router-view></router-view>
 
 </template>
 
