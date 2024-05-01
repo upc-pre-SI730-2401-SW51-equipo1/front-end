@@ -1,4 +1,4 @@
-import http from '../../shared/services/http-common';
+import http from "../../shared/service/http-common.js";
 import axios from 'axios';
 
 const baseUrl = 'http://localhost:3000/comics';

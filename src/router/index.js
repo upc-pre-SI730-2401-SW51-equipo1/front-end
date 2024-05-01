@@ -6,6 +6,7 @@ import store from "../store.js";
 import login from "../auth/pages/Login/Login.vue";
 import CreateAccount from "../auth/pages/create-account/CreateAccount.vue";
 import recomendation from "@/recommendations/pages/recomendation.vue";
+import filter from "@/comics/pages/filter.vue";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -37,6 +38,7 @@ const router = createRouter({
         { path: '/', redirect: '/home' },
         { path: '/create-account', component: CreateAccount },
         { path: '/recomendation', component: recomendation },
+        { path: '/filter', component: filter },
     ],
 });
 router.beforeEach((to, from, next) => {

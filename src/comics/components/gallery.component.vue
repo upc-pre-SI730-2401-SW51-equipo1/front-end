@@ -9,25 +9,36 @@ export default defineComponent({
   data() {
     return {
       comics: [],
+      message: `filtro: Comics` // Añade tu mensaje aquí
     };
   },
   created() {
     fetchComics().then(data => {
       this.comics = data;
     });
+  },
+  methods: {
+    uppercase(value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.toUpperCase()
+    }
   }
 })
 </script>
 
 <template>
   <div>
-  <nav class="navbar">
-    <pv-button icon="pi pi-sliders-h" class="p-mr-2" plain text></pv-button>
-    <div class="search-bar">
-      <input type="text" placeholder="Search comics">
-      <button type="button">Search</button>
+    <div class="custom-class">
+      <p>{{ uppercase(message) }}</p> <!-- Usa el método aquí -->
     </div>
-  </nav>
+    <nav class="navbar">
+      <pv-button icon="pi pi-sliders-h" class="p-mr-2" plain text></pv-button>
+      <div class="search-bar">
+        <input type="text" placeholder="Search comics">
+        <button type="button">Search</button>
+      </div>
+    </nav>
   </div>
 
   <div>
@@ -71,7 +82,11 @@ li{
   width: 100%;
   z-index: 10;
 }
-
+.custom-class {
+  border: 1px solid white;
+  margin-left: 0;
+  background-color: #fff;
+}
 .nav-links li {
   margin-right: 20px;
 }
