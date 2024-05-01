@@ -1,10 +1,10 @@
 <script>
 
-import Recomendation from '@/recommendations/component/recomendation-content.component.vue'
+import shoppingcartContent from './shopping-cart/component/shoppingcart-content.component.vue';
 
 export default {
   components: {
-    Recomendation
+    shoppingcartContent
   }
 }
 
@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div>
-    <Recomendation />
+    <shoppingcartContent />
   </div>
 
 </template>

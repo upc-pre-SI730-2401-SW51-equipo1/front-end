@@ -1,4 +1,18 @@
 {
+  "shoppingcart": [
+    {
+      "id": 1,
+      "libroid": 12,
+      "pricetotal": 25
+    },
+
+    {
+      "id": 2,
+      "libroid": 12,
+      "pricetotal": 50
+    }
+  ],
+
   "libros": [
     {
       "id": 1,

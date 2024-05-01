@@ -11,7 +11,8 @@ import Menubar from "primevue/menubar";
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Toolbar from "primevue/toolbar";
-import RecomendationContent from "@/recommendations/component/recomendation-content.component.vue";
+
+import shoppingcartContentComponent from './shopping-cart/component/shoppingcart-content.component.vue';
 
 const app = createApp(App);
 app.use(PrimeVue, { ripple: true });
@@ -21,7 +22,7 @@ app.component('pv-menubar', Menubar);
 app.component('pv-data-table', DataTable);
 app.component('pv-column', Column);
 app.component('pv-toolbar', Toolbar);
-app.component('pv-recomendation', RecomendationContent);
+app.component('pv-shoppingcart', shoppingcartContentComponent);
 
 // Montar la aplicación
 app.mount('#app');
