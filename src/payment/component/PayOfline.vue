@@ -566,24 +566,24 @@ export default defineComponent({
 .favicon {
   position: absolute;
   top: 0.625rem;
-  left: 0rem;
+  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-xl) 0rem 0rem;
+  padding: var(--padding-xl) 0 0;
   box-sizing: border-box;
   max-width: 100%;
 }
 .s40002 {
   position: absolute;
   width: 100%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
   display: inline-block;
@@ -592,19 +592,19 @@ export default defineComponent({
 .sidebarItemList {
   position: absolute;
   width: 8.17%;
-  top: 0rem;
-  right: 0%;
+  top: 0;
+  right: 0;
   left: 91.83%;
   height: 1.25rem;
 }
 .subtotal {
   position: absolute;
   width: 100%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
   display: inline-block;
@@ -614,17 +614,17 @@ export default defineComponent({
 .sidebarItemList1 {
   position: absolute;
   width: 9.41%;
-  top: 0rem;
+  top: 0;
   right: 90.59%;
-  left: 0%;
+  left: 0;
   height: 1.25rem;
 }
 .sidebarContainer {
   position: absolute;
   width: 100%;
   top: 0.625rem;
-  right: 0%;
-  left: 0%;
+  right: 0;
+  left: 0;
   height: 1.25rem;
   z-index: 1;
 }
@@ -638,11 +638,11 @@ export default defineComponent({
 .continuar {
   position: absolute;
   top: 0.438rem;
-  left: calc(50% - 72.9px);
+  left: calc(50% - 73px);
   font-size: var(--font-size-base);
   line-height: 1.5rem;
   display: inline-block;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-white);
   text-align: center;
   width: 4.688rem;
@@ -677,12 +677,12 @@ export default defineComponent({
 .resumenDelPedido {
   position: absolute;
   width: 33.92%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-xl);
   line-height: 1.75rem;
   display: inline-block;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
 }
@@ -716,10 +716,10 @@ export default defineComponent({
   position: absolute;
   width: 100%;
   top: calc(50% - 10px);
-  left: 0%;
+  left: 0;
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-darkslategray);
   text-align: left;
   display: inline-block;
@@ -743,13 +743,13 @@ export default defineComponent({
 }
 .imageCaption {
   position: absolute;
-  top: 0rem;
+  top: 0;
   left: 2.813rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-11xs) 0rem 0rem;
+  padding: var(--padding-11xs) 0 0;
 }
 .listItem {
   position: absolute;
@@ -762,11 +762,11 @@ export default defineComponent({
 .alContinuarConfirmas {
   position: absolute;
   width: 100%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-xs);
   line-height: 1rem;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-slategray);
   text-align: left;
   display: inline-block;
@@ -780,14 +780,7 @@ export default defineComponent({
   left: 2.69%;
   height: 2rem;
 }
-.frameIcon {
-  position: absolute;
-  top: 1rem;
-  left: calc(50% + 256.1px);
-  width: 1rem;
-  height: 1rem;
-  overflow: hidden;
-}
+
 .frameChild {
   border: none;
   outline: none;
@@ -802,7 +795,7 @@ export default defineComponent({
   justify-content: flex-start;
   padding: var(--padding-9xs) var(--padding-5xs);
   box-sizing: border-box;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   font-size: var(--font-size-base);
   color: var(--color-darkgray-100);
 }
@@ -816,8 +809,8 @@ export default defineComponent({
 }
 .borders2 {
   position: absolute;
-  top: 0rem;
-  left: 0rem;
+  top: 0;
+  left: 0;
   width: 3.875rem;
   height: 1.5rem;
 }
@@ -826,10 +819,10 @@ export default defineComponent({
   position: absolute;
   width: 100%;
   top: calc(50% - 13px);
-  left: 0%;
+  left: 0;
   font-size: var(--font-size-base);
   line-height: 1.5rem;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
   display: inline-block;
@@ -870,15 +863,15 @@ export default defineComponent({
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-11xs) 0rem 0rem;
+  padding: var(--padding-11xs) 0 0;
   box-sizing: border-box;
 }
 .frame3 {
   position: absolute;
   width: 100%;
   top: 1.5rem;
-  right: 0%;
-  left: 0%;
+  right: 0;
+  left: 0;
   border-radius: var(--br-9xs);
   background-color: var(--color-floralwhite);
   border: 2px solid var(--color-sandybrown);
@@ -888,8 +881,8 @@ export default defineComponent({
 .nmeroDeTelfono {
   position: absolute;
   width: 22.91%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
   font-weight: 500;
@@ -901,9 +894,9 @@ export default defineComponent({
 .frame4 {
   position: absolute;
   width: 100%;
-  top: 0rem;
-  right: 0%;
-  left: 0%;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 1.25rem;
 }
 .loadingSpinner1 {
@@ -917,7 +910,7 @@ export default defineComponent({
 .formFieldIcon {
   position: absolute;
   top: 1rem;
-  left: calc(50% + 256.1px);
+  left: calc(50% + 256px);
   width: 1rem;
   height: 1rem;
   overflow: hidden;
@@ -928,13 +921,13 @@ export default defineComponent({
   background-color: transparent;
   position: absolute;
   width: 91.65%;
-  top: calc(50% - 13.5px);
+  top: calc(50% - 14px);
   right: 6.58%;
   left: 1.77%;
   height: 1.75rem;
   padding: var(--padding-9xs) var(--padding-5xs);
   box-sizing: border-box;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   font-size: var(--font-size-base);
   color: var(--color-darkgray-100);
   z-index: 1;
@@ -943,8 +936,8 @@ export default defineComponent({
   position: absolute;
   width: 100%;
   top: 1.5rem;
-  right: 0%;
-  left: 0%;
+  right: 0;
+  left: 0;
   border-radius: var(--br-9xs);
   background-color: var(--color-floralwhite);
   border: 2px solid var(--color-sandybrown);
@@ -954,12 +947,12 @@ export default defineComponent({
 .nombreCompleto {
   position: absolute;
   width: 20.79%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
   font-weight: 500;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
   display: inline-block;
@@ -967,9 +960,9 @@ export default defineComponent({
 .frame5 {
   position: absolute;
   width: 100%;
-  top: 0rem;
-  right: 0%;
-  left: 0%;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 1.25rem;
 }
 .loadingSpinner2 {
@@ -983,12 +976,12 @@ export default defineComponent({
 .pagoViaPago {
   position: absolute;
   width: 37.84%;
-  top: 0rem;
-  left: 0%;
+  top: 0;
+  left: 0;
   font-size: var(--font-size-xl);
   line-height: 1.75rem;
   display: inline-block;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
 }
@@ -1014,8 +1007,8 @@ export default defineComponent({
   height: 25.688rem;
   flex: 1;
   position: relative;
-  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
-  0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 0px 0px #000, 0px 0px 0px #000;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1),
+  0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 0 0 #000, 0 0 0 #000;
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   overflow: hidden;
@@ -1027,7 +1020,7 @@ export default defineComponent({
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 0rem var(--padding-3xs) 0rem 0rem;
+  padding: 0 var(--padding-3xs) 0 0;
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -1217,7 +1210,7 @@ export default defineComponent({
   text-align: left;
   font-size: var(--font-size-29xl);
   color: var(--color-black);
-  font-family: var(--font-poppins);
+  font-family: var(--font-poppins),serif;
 }
 
 @media screen and (max-width: 1325px) {
