@@ -8,9 +8,8 @@ import CreateAccount from "../auth/pages/create-account/CreateAccount.vue";
 import recomendation from "@/recommendations/pages/recomendation.vue";
 import filter from "@/comics/pages/filter.vue";
 
-
 const router = createRouter({
-    history: createWebHistory('#'),
+    history: createWebHistory(),
     routes: [
 
         { path: '/home', component: index },
@@ -34,7 +33,7 @@ const router = createRouter({
         { path: '/', redirect: '/home' },
         { path: '/create-account', component: CreateAccount },
         { path: '/recomendation', component: recomendation },
-
+,
         { path: '/filter', component: filter },
 
     ],
