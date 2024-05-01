@@ -32,7 +32,7 @@
       </div>
     </div>
     <div :class="$style.phoneNumber">
-      <form :class="$style.mailAddress">
+      <form  @submit.prevent="createUser" :class="$style.mailAddress">
         <div :class="$style.locationInfo">
           <div :class="$style.openingHours">
             <div :class="$style.borders">
@@ -80,12 +80,12 @@
                     <div :class="$style.s40002">S/40.00</div>
                   </div>
                   <div :class="$style.sidebarItemList1">
-                    <div :class="$style.subtotal">SubTotal</div>
+                    <div  :class="$style.subtotal"> SubTotal</div>
                   </div>
                 </div>
               </div>
-              <button :class="$style.frame2">
-                <b :class="$style.continuar">Continuar</b>
+              <button  @click="createUser" :class="$style.frame2">
+                <b :class="$style.continuar" >Continuar</b>
               </button>
             </div>
             <div :class="$style.pageDescription">
@@ -114,7 +114,7 @@
               <input
                   :class="$style.frameChild"
                   placeholder="987654321"
-                  type="text"
+                  type="text" id="phone" v-model="newUser.phone"
               />
               <div :class="$style.formLabelWrapper">
                 <div :class="$style.formLabel">
@@ -135,11 +135,11 @@
           <div :class="$style.loadingSpinner2">
             <div :class="$style.callToAction">
               <img :class="$style.formFieldIcon" alt="" :src="'src/public/assets/frame-1.svg'" />
-              <input
-                  :class="$style.imageColumn"
-                  placeholder="Juan Pérez"
-                  type="text"
-              />
+                <input type="text" id="user" v-model="newUser.user"
+                    :class="$style.imageColumn"
+                    placeholder="Juan Pérez"
+
+                />
             </div>
             <div :class="$style.frame5">
               <div :class="$style.nombreCompleto">Nombre completo</div>
@@ -207,9 +207,37 @@
   </section>
 </template>
 <script>
-import { defineComponent } from "vue";
+import { defineComponent,ref  } from "vue";
+import {PaymentService} from "@/payment/service/payment.service";
+import {UserEntity} from "@/payment/model/user.entity.js";
 export default defineComponent({
-  name: "ReturnsPolicy",
+  name: "Ofline",
+  setup() {
+    // Creas una instancia de tu servicio
+    const paymentService = new PaymentService();
+
+    // Creas una referencia a un nuevo objeto UserEntity
+    const newUser = ref(new UserEntity('', '', '', ''));
+
+    // Método para crear un nuevo usuario
+    const createUser = () => {
+      // Llama al método create de tu servicio con el nuevo usuario
+      paymentService.create(newUser.value).then(
+          response => {
+            console.log('Pago creado con éxito:', response);
+          },
+          error => {
+            console.error('Hubo un error al crear el Pago:', error);
+          }
+      );
+    };
+
+    // Devuelves el método y el nuevo usuario para que puedan ser usados en tu plantilla
+    return {
+      newUser,
+      createUser
+    };
+  }
 });
 </script>
 <style module>
@@ -865,7 +893,7 @@ export default defineComponent({
   font-size: var(--font-size-sm);
   line-height: 1.25rem;
   font-weight: 500;
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto),serif;
   color: var(--color-black);
   text-align: left;
   display: inline-block;
