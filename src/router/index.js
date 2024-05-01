@@ -7,9 +7,10 @@ import login from "../auth/pages/Login/Login.vue";
 import CreateAccount from "../auth/pages/create-account/CreateAccount.vue";
 import recomendation from "@/recommendations/pages/recomendation.vue";
 import filter from "@/comics/pages/filter.vue";
+import viteConfig from "../../vite.config.js";
 
 const router = createRouter({
-    history: createWebHistory('front-end'),
+    history: createWebHistory(viteConfig.base),
     routes: [
 
         { path: '/home', component: index },
