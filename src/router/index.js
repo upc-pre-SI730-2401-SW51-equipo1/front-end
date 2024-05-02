@@ -10,7 +10,7 @@ import recomendation from "@/recommendations/pages/recomendation.vue";
 import filter from "@/comics/pages/filter.vue";
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('front-end'),
     routes: [
 
         { path: '/home', component: index },

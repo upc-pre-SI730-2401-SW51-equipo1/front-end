@@ -7,6 +7,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({  build: {
     chunkSizeWarningLimit: 5000 // Aumenta el límite a 600kB
   },
+  base: '/front-end/',
 
   plugins: [
     vue(),
