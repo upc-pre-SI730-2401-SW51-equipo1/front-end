@@ -38,7 +38,7 @@ export default {
         return
       }
 
-      const response = await axios.get('http://localhost:3000/users', {
+      const response = await axios.get('https://front-end-f65a6-default-rtdb.firebaseio.com/users', {
         params: {
           username: username.value,
           password: password.value

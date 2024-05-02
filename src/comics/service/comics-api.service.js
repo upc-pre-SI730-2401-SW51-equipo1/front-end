@@ -1,7 +1,7 @@
 import http from "../../shared/service/http-common.js";
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/comics';
+const baseUrl = 'https://front-end-f65a6-default-rtdb.firebaseio.com/comics';
 
 export class TutorialsApiService {
     getComics() {

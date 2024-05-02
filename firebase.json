@@ -1,7 +1,4 @@
 {
-  "database": {
-    "rules": "server/db.json"
-  },
   "hosting": {
     "public": "dist",
     "ignore": [],
@@ -20,9 +17,7 @@
     {
       "source": "functions",
       "codebase": "default",
-      "ignore": [
-
-      ]
+      "ignore": []
     }
   ],
   "emulators": {
@@ -43,5 +38,9 @@
   },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
-  }
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "extensions": {}
 }

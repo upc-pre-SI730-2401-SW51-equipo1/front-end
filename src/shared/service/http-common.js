@@ -1,7 +1,7 @@
 /**  axios default configs */
 import axios from "axios";
 
-const API_BASE_URL ='http://localhost:3000/api/v1';
+const API_BASE_URL ='https://front-end-f65a6-default-rtdb.firebaseio.com/';
 /**
  * Axios instance
  * @summary http axios instance creation with default configs

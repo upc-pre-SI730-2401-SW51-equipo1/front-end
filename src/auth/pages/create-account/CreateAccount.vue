@@ -42,7 +42,7 @@ export default {
         return
       }
 
-      const response = await axios.post('http://localhost:3000/users', {
+      const response = await axios.post('https://front-end-f65a6-default-rtdb.firebaseio.com/users', {
         username: username.value,
         password: password.value,
         mobileNumber: mobileNumber.value
