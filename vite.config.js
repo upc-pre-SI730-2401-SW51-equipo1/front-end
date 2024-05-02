@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
 import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
+
   plugins: [
     vue(),
     svgLoader()
@@ -13,6 +14,5 @@ export default defineConfig({
 
     }
   },
-  assetsInclude: ['**/*.html'] // Agrega esta línea
 
 })
