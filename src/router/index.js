@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory} from 'vue-router';
+import login from "../auth/pages/Login/Login.vue";
 import CheckoutOnline from "../payment/pages/CheckoutOnline.vue";
 import CheckoutOfline from "../payment/pages/CheckoutOfline.vue";
 import index from "../LadingPage/pages/index.vue";
 import store from "../store.js";
-import login from "../auth/pages/Login/Login.vue";
+
 import CreateAccount from "../auth/pages/create-account/CreateAccount.vue";
 import recomendation from "@/recommendations/pages/recomendation.vue";
 import filter from "@/comics/pages/filter.vue";
@@ -21,15 +22,14 @@ const router = createRouter({
             component: CheckoutOfline,
             beforeEnter: (to, from, next) => {
                 if (!store.getters.isAuthenticated) { // Utiliza el getter de Vuex
-                    next('/')
+                    next('/login')
                 } else {
                     next()
                 }
             }
         },
         {
-            path: "/login",
-            component: login,},
+            path: "/login", component: login,},
         { path: '/', redirect: '/home' },
         { path: '/create-account', component: CreateAccount },
         { path: '/recomendation', component: recomendation },

@@ -11,5 +11,37 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+
+      ]
+    }
+  ],
+  "emulators": {
+    "database": {
+      "port": 3000
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "storage": {
+      "port": 4000
+    },
+    "ui": {
+      "enabled": true,
+      "port": 15000
+    },
+    "singleProjectMode": true
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
