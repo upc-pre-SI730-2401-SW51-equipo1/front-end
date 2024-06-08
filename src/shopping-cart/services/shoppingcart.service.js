@@ -10,9 +10,8 @@ class ShoppingcartService {
         return http.get(`/shoppingcart/${id}`);
     }
 
-
     create(data){
-        return http.post('/shoppingcart, data');
+        return http.post('/shoppingcart', data);
     }
 
     update(id, data) {
@@ -34,6 +33,31 @@ class ShoppingcartService {
             }
         } catch (error) {
             console.error('Error fetching cart:', error);
+            throw error;
+        }
+    }
+
+    async getCart() {
+        try {
+            const response = await http.get('/shoppingcart');
+            if (response.data && Array.isArray(response.data) && response.data.length > 0) {
+                return response.data[0]; // Asumiendo que hay un solo carrito
+            } else {
+                console.error('La respuesta no tiene el formato esperado o está vacía.');
+                return { id: null, items: [] }; // Carrito vacío por defecto
+            }
+        } catch (error) {
+            console.error('Error fetching cart:', error);
+            return { id: null, items: [] }; // Carrito vacío en caso de error
+        }
+    }
+
+    async getAllBooks() {
+        try {
+            const response = await http.get('/libros');
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching the books:', error);
             throw error;
         }
     }

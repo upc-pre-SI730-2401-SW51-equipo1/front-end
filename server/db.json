@@ -1,21 +1,56 @@
 {
   "shoppingcart": [
     {
-      "id": 1,
+      "id": "1",
       "libroid": 12,
-      "pricetotal": 25
+      "pricetotal": 25,
+      "items": [
+        {
+          "libroid": "1",
+          "productName": "The Amazing",
+          "unitPrice": 25,
+          "quantity": 47,
+          "pricetotal": 1175
+        },
+        {
+          "libroid": "2",
+          "productName": "The Incredible",
+          "unitPrice": 25,
+          "quantity": 24,
+          "pricetotal": 600
+        },
+        {
+          "libroid": "3",
+          "productName": "The Incredible",
+          "unitPrice": 25,
+          "quantity": 6,
+          "pricetotal": 150
+        },
+        {
+          "libroid": "4",
+          "productName": "The Incredible",
+          "unitPrice": 25,
+          "quantity": 13,
+          "pricetotal": 325
+        },
+        {
+          "libroid": "8",
+          "productName": "The Incredible",
+          "unitPrice": 25,
+          "quantity": 1,
+          "pricetotal": 25
+        }
+      ]
     },
-
     {
-      "id": 2,
+      "id": "2",
       "libroid": 12,
       "pricetotal": 50
     }
   ],
-
   "libros": [
     {
-      "id": 1,
+      "id": "1",
       "title": "The Amazing",
       "price": 25,
       "writer": "Stan Lee",
@@ -24,7 +59,7 @@
       "gender": "Action"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -33,7 +68,7 @@
       "gender": "Action"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -42,7 +77,7 @@
       "gender": "Action"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -51,7 +86,7 @@
       "gender": "Action"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -60,7 +95,7 @@
       "gender": "Action"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -69,7 +104,7 @@
       "gender": "Action"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
@@ -78,7 +113,7 @@
       "gender": "Action"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "The Incredible",
       "price": 25,
       "writer": "Stan Lee",
